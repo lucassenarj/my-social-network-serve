@@ -40,7 +40,7 @@ class PostController {
   async show ({ params }) {
     const post = await Post.findOrFail(params.id)
 
-    //await post.load('likes')
+    await post.load('likes')
 
     return post
   }

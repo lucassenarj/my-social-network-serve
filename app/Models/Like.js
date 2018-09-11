@@ -2,14 +2,15 @@
 
 const Model = use('Model')
 
-class Post extends Model {
+class Like extends Model {
   user () {
     return this.belongsTo('App/Models/User')
   }
 
-  likes () {
-    return this.hasMany('App/Models/Like')
+  post () {
+    return this.belongsTo('App/Models/Post')
   }
+  
 }
 
-module.exports = Post
+module.exports = Like
